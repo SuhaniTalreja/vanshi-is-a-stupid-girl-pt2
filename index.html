@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(99, 136, 209);
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        #noButton {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">GUSSA MAT HOOOOOO; GHUMNE CHALOGE?????:)</h1>
+        </div>
+        <div class="gif_container">
+            <img src="https://media.giphy.com/media/xdHDjAK0wtZrMaoPAj/giphy.gif" alt="Cute animated illustration">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="openLink()">Yes</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+            <script>
+                function openLink() {
+                    window.open("https://suhanitalreja.github.io/vanshi-is-a-stupid-girl/", "_blank");
+                }
+
+                function moveButton() {
+                    var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+                    var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                    document.getElementById('noButton').style.left = `${x}px`;
+                    document.getElementById('noButton').style.top = `${y}px`;
+                }
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
